@@ -1,52 +1,48 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
     <title>Mathcode</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
-        crossorigin="anonymous">
+
 </head>
 
 <body>
 
     <header>
-        <div class="page-header">
-            <h1>Mathcode <small>Sample code from following along with <a href="https://app.pluralsight.com/library/courses/javascript-solve-math-problems/">this</a> Pluralsight course.</small></h1>
-        </div>
+        <nav class="navbar navbar-light bg-faded">
+            <h1 class="navbar-brand">Mathcode <small>Sample code from following along with <a href="https://app.pluralsight.com/library/courses/javascript-solve-math-problems/">this</a> Pluralsight course.</small></h1>
+        </nav>                    
     </header>
 
     <article>
-        <div class="container-fluid">
+        <div class="container">
 
-            <ul class="nav nav-tabs" role="tablist" id="mainNav">
-                <li role="presentation" class="active"><a href="#factorial" aria-controls="home" role="tab" data-toggle="tab">Factorial</a></li>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#factorial" role="tab">Factorial</a>
+                </li>                
             </ul>
-
+            
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="factorial">
-
-                </div>
-            </div>
+                <div class="tab-pane active" id="factorial" role="tabpanel"></div>                
+            </div>            
 
         </div>
 
     </article>
-
-    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.3.1/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7"
         crossorigin="anonymous"></script>
 
     <script>
-        $(document).ready(function () {
-            $('#mainNav a').click(function (e) {
-                e.preventDefault()
-                $(this).tab('show')
-            })
-
+        $(document).ready(function () {            
             $(function(){
                 $("#factorial").load("factorial/factorial.html"); 
             });
