@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mathcode</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header>
+        <div class="page-header">
+            <h1>Mathcode <small>Sample code from following along with <a href="https://app.pluralsight.com/library/courses/javascript-solve-math-problems/">this</a> Pluralsight course.</small></h1>
+        </div>
+    </header>
+
+    <article>
+        <div class="container-fluid">
+
+            <ul class="nav nav-tabs" role="tablist" id="mainNav">
+                <li role="presentation" class="active"><a href="#factorial" aria-controls="home" role="tab" data-toggle="tab">Factorial</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="factorial">
+
+                </div>
+            </div>
+
+        </div>
+
+    </article>
+
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#mainNav a').click(function (e) {
+                e.preventDefault()
+                $(this).tab('show')
+            })
+
+            $(function(){
+                $("#factorial").load("factorial/factorial.html"); 
+            });
+        })        
+    </script>
+</body>
+
+</html>
