@@ -17,7 +17,7 @@
     <header>
         <nav class="navbar navbar-light bg-faded">
             <h1 class="navbar-brand">Mathcode <small>Sample code from following along with <a href="https://app.pluralsight.com/library/courses/javascript-solve-math-problems/">this</a> Pluralsight course.</small></h1>
-        </nav>                    
+        </nav>
     </header>
 
     <article>
@@ -26,12 +26,16 @@
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#factorial" role="tab">Factorial</a>
-                </li>                
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#dice" role="tab">Dice</a>
+                </li>
             </ul>
-            
+
             <div class="tab-content">
-                <div class="tab-pane active" id="factorial" role="tabpanel"></div>                
-            </div>            
+                <div class="tab-pane fade in active" id="factorial" role="tabpanel"><span id="fact-view"></span></div>
+                <div class="tab-pane fade" id="dice" role="tabpanel"><span id="dice-view"></span></div>
+            </div>
 
         </div>
 
@@ -42,10 +46,9 @@
         crossorigin="anonymous"></script>
 
     <script>
-        $(document).ready(function () {            
-            $(function(){
-                $("#factorial").load("factorial/factorial.html"); 
-            });
+        $(document).ready(function () {                        
+            $("#fact-view").load("factorial/factorial.html"); 
+            $("#dice-view").load("dice/dice.html");             
         })        
     </script>
 </body>
